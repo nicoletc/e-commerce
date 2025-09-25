@@ -1,0 +1,22 @@
+
+/* tweak spacing + typography for home */
+.auth-title {
+  margin-bottom: 10px;
+}
+
+.auth-sub {
+  margin-bottom: 26px;
+}
+
+/* call-to-action buttons */
+.home-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.home-cta .btn--alt {
+  background: #3d3657; /* muted alt button */
+  color: #e6e2f1;
+}

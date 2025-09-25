@@ -1,0 +1,39 @@
+
+/* fine-tune spacing for the register form */
+.auth-title {
+  margin-bottom: 6px;
+}
+
+.auth-sub {
+  margin-bottom: 22px;
+}
+
+.role-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin: 12px 0 18px;
+}
+
+.role-row label {
+  font-weight: 500;
+  font-size: .95rem;
+  color: var(--ink);
+}
+
+#register-btn {
+  margin-top: 6px;
+  width: 100%;
+}
+
+.register-cta {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-cta .to-login {
+  color: #c2bbff;
+  font-size: .9rem;
+}

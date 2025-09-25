@@ -1,0 +1,30 @@
+
+/* spacing + typography */
+.auth-title {
+  margin-bottom: 6px;
+}
+
+.auth-sub {
+  margin-bottom: 22px;
+}
+
+/* tweak form fields */
+.field {
+  margin-bottom: 14px;
+}
+
+#login-btn {
+  margin-top: 6px;
+  width: 100%;
+}
+
+/* helper link to register */
+.login-cta {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.login-cta .to-register {
+  color: #c2bbff;
+  font-size: .9rem;
+}
