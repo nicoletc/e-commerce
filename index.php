@@ -1,8 +1,12 @@
 <?php
 // index.php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
+
 $loggedIn = !empty($_SESSION['customer_id']);
 $customer = $_SESSION['customer_name'] ?? null;
+
+// admin = role 1
+$isAdmin  = isset($_SESSION['user_role']) && (int)$_SESSION['user_role'] === 1;
 ?>
 <!doctype html>
 <html lang="en">
@@ -33,11 +37,19 @@ $customer = $_SESSION['customer_name'] ?? null;
           </p>
 
           <div class="home-cta">
-            <?php if ($loggedIn): ?>
-              <a class="btn btn--alt" href="Actions/logout.php">Logout</a>
-            <?php else: ?>
+            <?php if (!$loggedIn): ?>
+              <!-- Not logged in -->
               <a class="btn" href="view/register.php">Create account</a>
               <a class="btn btn--alt" href="view/login.php">Log in</a>
+
+            <?php elseif ($isAdmin): ?>
+              <!-- Logged in AND admin -->
+              <a class="btn" href="admin/category.php">Category</a>
+              <a class="btn btn--alt" href="Actions/logout.php">Logout</a>
+
+            <?php else: ?>
+              <!-- Logged in but NOT admin -->
+              <a class="btn btn--alt" href="Actions/logout.php">Logout</a>
             <?php endif; ?>
           </div>
         </section>

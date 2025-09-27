@@ -60,3 +60,14 @@ function require_role(array $allowed, ?string $to = null): void {
         redirect(PATH_HOME);
     }
 }
+
+function require_admin(): void {
+    if (!is_logged_in()) {
+        header('Location: ../view/login.php'); // from /admin/ to /view/
+        exit;
+    }
+    if (!is_admin()) {
+        header('Location: ../index.php'); // block non-admins
+        exit;
+    }
+}
