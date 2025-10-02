@@ -24,7 +24,7 @@ $isAdmin  = isset($_SESSION['user_role']) && (int)$_SESSION['user_role'] === 1;
         
         <!-- LEFT PANEL -->
         <aside class="auth-visual">
-          <div class="auth-caption">Welcome to Nicole's Website</div>
+          <img src="images/index.png" alt="Register Visual">
         </aside>
 
         <!-- RIGHT PANEL -->
@@ -43,12 +43,10 @@ $isAdmin  = isset($_SESSION['user_role']) && (int)$_SESSION['user_role'] === 1;
               <a class="btn btn--alt" href="view/login.php">Log in</a>
 
             <?php elseif ($isAdmin): ?>
-              <!-- Logged in AND admin -->
               <a class="btn" href="admin/category.php">Category</a>
               <a class="btn btn--alt" href="Actions/logout.php">Logout</a>
 
             <?php else: ?>
-              <!-- Logged in but NOT admin -->
               <a class="btn btn--alt" href="Actions/logout.php">Logout</a>
             <?php endif; ?>
           </div>

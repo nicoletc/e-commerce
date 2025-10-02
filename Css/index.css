@@ -20,3 +20,15 @@
   background: #3d3657; /* muted alt button */
   color: #e6e2f1;
 }
+
+.auth-visual {
+  flex: 1;
+  position: relative;
+  padding: 0;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+
+  /* Background image loaded via CSS (index.css is in /Css/, so go up one level) */
+  background: url('../images/index.png') no-repeat center center;
+  background-size: cover;
+}

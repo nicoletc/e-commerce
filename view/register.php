@@ -16,7 +16,6 @@
       <div class="auth-grid">
 
         <aside class="auth-visual">
-          <div class="auth-caption">Capturing Moments, Creating Memories</div>
         </aside>
 
         <section class="auth-form">
@@ -129,6 +128,7 @@
 
     function checkMatch(){
       const ok = $pw.val() !== '' && $pw.val() === $cpw.val();
+      markBox('match-req','match', ok);
       markBox('match-req','match', ok);
       toggleHasValue($cpw);
     }
